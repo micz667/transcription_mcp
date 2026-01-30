@@ -1,0 +1,29 @@
+{
+  "audio_extraction": {
+    "audio_format": "wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "chunk_duration": 30.0
+  },
+  "transcription": {
+    "model": "whisper-medium",
+    "language": "en",
+    "task": "transcribe"
+  },
+  "output": {
+    "include_timestamps": true,
+    "include_confidence": true,
+    "include_speaker_diarization": false,
+    "template": "default"
+  },
+  "processing": {
+    "max_workers": 4,
+    "batch_size": 10,
+    "timeout": 300.0
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "transcribe.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+} 
